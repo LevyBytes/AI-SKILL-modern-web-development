@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "owner": ".",
+  "topics": [
+    {"topic": "Source topics", "file": "references/upstream-operations/source-topics.json", "summary": "Open when searching the source topics for Upstream tools and evaluation.", "keywords": ["source", "Upstream tools and evaluation"]},
+    {"topic": "Authored topics", "file": "references/upstream-operations/authored-topics.json", "summary": "Open when searching the authored topics for Upstream tools and evaluation.", "keywords": ["authored", "Upstream tools and evaluation"]},
+    {"topic": "Published topics", "file": "references/upstream-operations/published-topics.json", "summary": "Open when searching the published topics for Upstream tools and evaluation.", "keywords": ["published", "Upstream tools and evaluation"]},
+    {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translated references"]}
+  ]
+}

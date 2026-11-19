@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "owner": ".",
+  "topics": [
+    {"topic": "Retrieval workflow", "file": "references/upstream-operations/retrieval-workflow.md", "summary": "Open when consulting the upstream tool's search and retrieval conventions.", "keywords": ["retrieval-workflow", "Authored guide"]},
+    {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translated references"]}
+  ]
+}

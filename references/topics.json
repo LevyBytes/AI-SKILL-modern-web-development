@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "owner": ".",
+  "topics": [
+    {"topic": "HTML and web components", "file": "references/document-structure/topics.json", "summary": "Open when choosing semantic elements, creating custom elements or managing a shadow tree.", "keywords": ["HTML and web components", "html"]},
+    {"topic": "Accessible interfaces", "file": "references/accessible-interfaces/topics.json", "summary": "Open when checking accessible names, error announcements or system text scaling.", "keywords": ["Accessible interfaces", "accessibility"]},
+    {"topic": "CSS layout and the cascade", "file": "references/layout-and-cascade/topics.json", "summary": "Open when choosing layout, intrinsic sizing, conditional styles or responsive components.", "keywords": ["CSS layout and the cascade", "css"]},
+    {"topic": "Form entry and selection", "file": "references/form-controls/topics.json", "summary": "Open when implementing validation, autofill, text entry, pickers or range controls.", "keywords": ["Form entry and selection", "forms"]},
+    {"topic": "Interface components", "file": "references/interface-components/topics.json", "summary": "Open when building navigation, dialogs, menus, tables or application controls.", "keywords": ["Interface components", "ui-components"]},
+    {"topic": "Interface details", "file": "references/interface-details/topics.json", "summary": "Open when positioning overlays or adding scroll cues, icons and overflow indicators.", "keywords": ["Interface details", "ui-atoms"]},
+    {"topic": "Interaction patterns", "file": "references/interaction-patterns/topics.json", "summary": "Open when handling gestures, navigation, focus, motion or scroll behavior.", "keywords": ["Interaction patterns", "ui-behaviors"]},
+    {"topic": "Adaptive experiences", "file": "references/adaptive-experiences/topics.json", "summary": "Open when adapting navigation and interaction to devices and user preferences.", "keywords": ["Adaptive experiences", "user-experience"]},
+    {"topic": "Visual presentation", "file": "references/visual-presentation/topics.json", "summary": "Open when selecting typography, color, artwork and visual treatments.", "keywords": ["Visual presentation", "visual-design"]},
+    {"topic": "JavaScript and time", "file": "references/client-data/topics.json", "summary": "Open when working with client data, timestamps, calendars or asynchronous state.", "keywords": ["JavaScript and time", "js"]},
+    {"topic": "Loading and responsiveness", "file": "references/rendering-performance/topics.json", "summary": "Open when measuring loading, rendering, interaction latency or resource priorities.", "keywords": ["Loading and responsiveness", "performance"]},
+    {"topic": "Browser privacy", "file": "references/privacy-controls/topics.json", "summary": "Open when handling web identity, embedded state and privacy boundaries.", "keywords": ["Browser privacy", "privacy"]},
+    {"topic": "Browser security and identity", "file": "references/browser-security/topics.json", "summary": "Open when implementing origin checks, content safety, cryptography or passkeys.", "keywords": ["Browser security and identity", "security"]},
+    {"topic": "Installed web applications", "file": "references/installed-web-apps/topics.json", "summary": "Open when building offline behavior, installation, updates or OS integration.", "keywords": ["Installed web applications", "pwa"]},
+    {"topic": "Built-in model APIs", "file": "references/browser-models/topics.json", "summary": "Open when checking device support for prompting, translation, detection or summarization.", "keywords": ["Built-in model APIs", "built-in-ai"]},
+    {"topic": "WebAssembly builds", "file": "references/webassembly-builds/topics.json", "summary": "Open when compiling C or C++ for a browser runtime.", "keywords": ["WebAssembly builds", "wasm"]},
+    {"topic": "WebMCP tools", "file": "references/web-tools/topics.json", "summary": "Open when exposing a form or registering an authorized tool from a web document.", "keywords": ["WebMCP tools", "webmcp"]},
+    {"topic": "Chrome extension development", "file": "references/extension-development/topics.json", "summary": "Open when implementing Manifest V3 components, API calls or extension UI.", "keywords": ["Chrome extension development", "extension"]},
+    {"topic": "Chrome Web Store preparation", "file": "references/extension-distribution/topics.json", "summary": "Open when preparing extension listing materials, privacy disclosures and review checks.", "keywords": ["Chrome Web Store preparation", "webstore"]},
+    {"topic": "Feature support and fallbacks", "file": "references/feature-support/topics.json", "summary": "Open when checking platform feature identifiers, trial records or fallback behavior.", "keywords": ["Feature support and fallbacks", "feature"]},
+    {"topic": "Upstream tools and evaluation", "file": "references/upstream-operations/topics.json", "summary": "Open when interpreting the captured upstream retrieval workflow, evaluation vocabulary or result management.", "keywords": ["Upstream tools and evaluation", "upstream"]},
+    {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translated references"]}
+  ]
+}

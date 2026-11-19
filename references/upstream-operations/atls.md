@@ -1,0 +1,36 @@
+# Content Area Tech Leads (ATLs)
+
+Content Area Tech Leads (Content ATLs) are project [Peers](https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/GOVERNANCE.md#peers) and long-term contributors who take ownership and stewardship over domain categories (e.g., *Performance*, *CSS*, *Forms*, *UI Behaviors*, *Accessibility*) and cross-cutting feature horizontals in Modern Web Guidance.
+
+Content ATLs ensure that all guidance within their domain is technically accurate, aligned with modern web standards, and ready for downstream automated evaluation.
+
+
+## Core Responsibilities
+
+* **Subject Matter Expertise & Coverage Strategy**: Serve as the primary technical point of contact for architectural or platform questions in their area, and proactively identify high-impact developer tasks where new guidance is needed.
+* **Use Case Validation (Stage 1)**: Triage and align on proposed new use cases within their category against the [`project-use-cases`](https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/.agents/skills/project-use-cases/SKILL.md) criteria before authors invest effort in full guide authoring.
+* **Authoring & Technical Review (Stage 2)**: Author guidance for new use cases and provide formal technical review and sign-off on PRs in their domain against the [`project-guides`](https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/.agents/skills/project-guides/SKILL.md) and [`project-guide-validation`](https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/.agents/skills/project-guide-validation/SKILL.md) standards. Every guide must be authored (or co-authored/sponsored) by a Peer or Content ATL and approved according to [`GOVERNANCE.md`](https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/GOVERNANCE.md#content-area-tech-leads-content-atls) before merging.
+* **Discipline Guide Stewardship**: Ensure discipline-level guides are decomposed into focused subguides rather than monolithic guides, following [`project-discipline-guides`](https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/.agents/skills/project-discipline-guides/SKILL.md).
+* **Evaluation Triage & Continuous Maintenance**: Partner with the Engineering team when automated evaluations surface content or expectation issues, keep `guide.md` and `expectations.md` aligned as web standards and Baseline statuses evolve, and prune guidance that becomes redundant.
+
+
+## Category Ownership & Lookup
+
+ATL stewardship spans both **domain verticals** (directory categories) and **guidance horizontals** (cross-cutting feature groups like Motion or WebAuthn).
+
+Official ownership mapping is maintained in **[`.github/atls.json`](https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/.github/atls.json)**, which routes ATL assignments across three tables (unioning matched category, feature, and group ATLs via `src/ci/atl-triage.ts`):
+
+1. **`web_features`**: Specific feature-level assignments (e.g., `prefers-reduced-motion`, `canvas-html`).
+2. **`web_features_groups`**: Cross-cutting guidance horizontals and feature groups (e.g., `animation`, `transitions`, `view-transitions`, `scrolling`, `webauthn`).
+3. **`default`**: Domain vertical defaults across guidance directories (`css`, `forms`, `performance`, `ui-behaviors`, `ui-components`, `built-in-ai`, `privacy`, `security`, `webmcp`, etc.).
+
+The `.github/workflows/atl-triage.yml` workflow automatically uses [`.github/atls.json`](https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/.github/atls.json) to assign and request review from the designated Content ATL on issues and pull requests.
+
+
+## Review & Triage Workflows
+
+* **Reviewing Stage 1 Use Cases**: Verify that proposed use cases follow [`project-use-cases`](https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/.agents/skills/project-use-cases/SKILL.md) (action-oriented task phrasing, non-duplicative scope, real-world developer impact) before approving the author to proceed to Stage 2.
+* **Reviewing Stage 2 Guidance PRs**: Verify that `guide.md`, `demo.html`, and `expectations.md` satisfy [`project-guides`](https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/.agents/skills/project-guides/SKILL.md) and [`project-guide-validation`](https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/.agents/skills/project-guide-validation/SKILL.md) (technical accuracy, self-contained guidance, appropriate Baseline fallback macros, clean standalone demo, and observable expectations).
+* **Triaging Volatility Objections**: Within two weeks of the `volatility` label being applied to an issue or pull request in their domain, assess the concern (e.g., whether guidance can be scoped to a stable subset of the feature) and recommend an outcome for the Owners to decide per [Volatility Objections](https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/guides/CONTRIBUTING.md#volatility-objections).
+
+GoogleChrome Modern Web Guidance contributors. [Original document](https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/docs/ATLS.md#L1-L34). [Upstream licensing terms](https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/README.md#license). Reorganized for this edition.

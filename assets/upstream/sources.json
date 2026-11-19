@@ -1,0 +1,67 @@
+[
+  {
+    "file": "grading/test-fixture.ts",
+    "sha256": "bef6bca2cef1775e57faf50c3bb7aea444cf50c415813bdf5912600c737a5545",
+    "source_url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/src/grading/test-fixture.ts"
+  },
+  {
+    "file": "grading/playwright.config.ts",
+    "sha256": "39995096b89b08d3934792d99fd2e6d34b6bc56c998f44bb6f78cf2c7c0d7d2d",
+    "source_url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/src/grading/playwright.config.ts"
+  },
+  {
+    "file": "grading/run-grader.ts",
+    "sha256": "ec4053d68e122b99e4ce7f12fd1f0c43be1d197ee0f6a4c54be25b9805287323",
+    "source_url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/src/grading/run-grader.ts"
+  },
+  {
+    "file": "grading/target-server.ts",
+    "sha256": "ddce15e54286c01d468e9b4ad6e048ce91606736f3930392d233c8b2511726a0",
+    "source_url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/src/grading/target-server.ts"
+  },
+  {
+    "file": "core/grader-lint.ts",
+    "sha256": "2f3bd80e10c5966e8ee6c2f4bc06dcc8c1572bd81eb114f6cfe2da9b01bd6c6a",
+    "source_url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/src/core/grader-lint.ts"
+  },
+  {
+    "file": "rag/guides.ts",
+    "sha256": "2c46c545270d0a21ac188011911f1cb651b0d73f5cfe78b299d22c711454d968",
+    "source_url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/src/rag/guides.ts"
+  },
+  {
+    "file": "rag/retrieve.ts",
+    "sha256": "0e9cf1df07a0319280a69a306a6f1d5c8bdfc39145fe77b58f987ba13dbace6c",
+    "source_url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/src/rag/retrieve.ts"
+  },
+  {
+    "file": "rag/search.ts",
+    "sha256": "119b47228e213358ac1d356c1a961ff5a2fa4c82150d400de7cd4826390b03e5",
+    "source_url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/src/rag/search.ts"
+  },
+  {
+    "file": "rag/data-dir.ts",
+    "sha256": "d6314ecfcab5dc00be91eb683c09af09f3305311c998a603182bac454810add9",
+    "source_url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/src/rag/data-dir.ts"
+  },
+  {
+    "file": "rag/bm25.ts",
+    "sha256": "d500702b795447b54eeffc8829d40f06b175ae06ba2b70769e52c412474ca086",
+    "source_url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/src/rag/bm25.ts"
+  },
+  {
+    "file": "rag/quantize.ts",
+    "sha256": "670ba4eb622cc89b8cd71f2a5baf5fe32943e205a21cd4db509abc71aaa95bc0",
+    "source_url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/src/rag/quantize.ts"
+  },
+  {
+    "file": "rag/static-embedder.ts",
+    "sha256": "1e831f9feba5800717712ef7c4cfe4f8abadf713032b908c14349d023f9c32e4",
+    "source_url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/src/rag/static-embedder.ts"
+  },
+  {
+    "file": "cli/modern-web.ts",
+    "sha256": "2cbe4be02048f684002314292b08bb2bda61896c3819cc7e1adc63a76bd2645c",
+    "source_url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/e8feb43e0e61c791f905904222492bf2e4e573fe/src/cli/modern-web.ts"
+  }
+]

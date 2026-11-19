@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "owner": ".",
+  "topics": [
+    {"topic": "Install web app", "file": "references/installed-web-apps/install-web-app-published/index.md", "summary": "Open when opening a consent-based installation prompt.", "keywords": ["install-web-app", "Published edition", "install", "navigator-install", "beforeinstallprompt"]},
+    {"topic": "Migrate web app origin", "file": "references/installed-web-apps/migrate-web-app-origin-published.md", "summary": "Open when retaining installed app identity across an origin move.", "keywords": ["migrate-web-app-origin", "Published edition", "app-migration"]},
+    {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translated references"]}
+  ]
+}

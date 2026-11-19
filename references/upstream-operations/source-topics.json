@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "owner": ".",
+  "topics": [
+    {"topic": "Content area leads", "file": "references/upstream-operations/atls.md", "summary": "Open when identifying subject review responsibilities.", "keywords": ["atls", "Document"]},
+    {"topic": "Eval results", "file": "references/upstream-operations/eval-results.md", "summary": "Open when interpreting saved benchmark artifacts and reports.", "keywords": ["eval-results", "Document"]},
+    {"topic": "Evaluation harness", "file": "references/upstream-operations/evals/overview.md", "summary": "Open when understanding how upstream trials are run.", "keywords": ["evals", "Document"]},
+    {"topic": "Benchmark vocabulary", "file": "references/upstream-operations/lexicon/overview.md", "summary": "Open when distinguishing evaluation tasks, jobs and checks.", "keywords": ["lexicon", "Document"]},
+    {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translated references"]}
+  ]
+}

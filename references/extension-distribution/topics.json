@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "owner": ".",
+  "topics": [
+    {"topic": "Source topics", "file": "references/extension-distribution/source-topics.json", "summary": "Open when searching the source topics for Chrome Web Store preparation.", "keywords": ["source", "Chrome Web Store preparation"]},
+    {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translated references"]}
+  ]
+}

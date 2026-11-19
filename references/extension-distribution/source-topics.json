@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "owner": ".",
+  "topics": [
+    {"topic": "Chromewebstore template", "file": "references/extension-distribution/chromewebstore-template/index.md", "summary": "Open when assembling a submission packet with review notes.", "keywords": ["chromewebstore-template", "Document"]},
+    {"topic": "Privacy policy", "file": "references/extension-distribution/privacy-policy/overview.md", "summary": "Open when documenting data access, retention and disclosure.", "keywords": ["privacy-policy", "Document"]},
+    {"topic": "Review checklist", "file": "references/extension-distribution/review-checklist/overview.md", "summary": "Open when checking a packaged extension before store submission.", "keywords": ["review-checklist", "Document"]},
+    {"topic": "Store listing", "file": "references/extension-distribution/store-listing/index.md", "summary": "Open when describing extension functionality for store review.", "keywords": ["store-listing", "Document"]},
+    {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translated references"]}
+  ]
+}

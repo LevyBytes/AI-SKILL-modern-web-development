@@ -1,0 +1,12 @@
+{
+  "name": "modern-web-development-tools",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.18.0" },
+  "dependencies": {
+    "@playwright/test": "1.58.2",
+    "cssomnom": "0.1.11",
+    "linkedom": "0.18.12",
+    "ts-morph": "27.0.2"
+  }
+}
