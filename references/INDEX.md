@@ -14,6 +14,7 @@
 - Open when handling web identity, embedded state and privacy boundaries. [Browser privacy](privacy-controls/index.md).
 - Open when implementing origin checks, content safety, cryptography or passkeys. [Browser security and identity](browser-security/index.md).
 - Open when building offline behavior, installation, updates or OS integration. [Installed web applications](installed-web-apps/index.md).
+- Open when writing a site's head tags, titles and descriptions, share images, icons, structured data, crawl, feed, app link and well-known files, AI usage preferences or ownership verification, or previewing and auditing metadata before deployment. [Site metadata](site-metadata/index.md).
 - Open when checking device support for prompting, translation, detection or summarization. [Built-in model APIs](browser-models/index.md).
 - Open when compiling C or C++ for a browser runtime. [WebAssembly builds](webassembly-builds/index.md).
 - Open when exposing a form or registering an authorized tool from a web document. [WebMCP tools](web-tools/index.md).

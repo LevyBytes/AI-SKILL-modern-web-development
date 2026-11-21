@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Share card</title>
+  <!--
+    A 1200 x 630 share card, rendered by scripts/share-previews/render-share-cards.ts. Its URL parameters set it:
+      eyebrow   small capitals above the title
+      title     the title; a | starts a second line
+      tagline   one short line under the title, in the accent color
+      logo      an image drawn large and faint behind the left side (a file: or https: URL)
+      bg, bg2   the gradient's two colors        fg       the text color
+      accent    the tagline's color              font     a CSS font-family list
+      lang      the card's language (default en)
+    Every word sits inside the center square (x 285 to 915), above the bottom band where X lays the page title, so the
+    square and 4:3 crops keep the whole text. Elements marked data-share-text are the ones the script measures.
+  -->
+  <style>
+    :root { --bg: #0b1d26; --bg2: #133744; --fg: #f3f7f8; --accent: #ffbb00; --font: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+    body { position: relative; background: linear-gradient(120deg, var(--bg) 0%, var(--bg2) 100%); color: var(--fg); font-family: var(--font); }
+    .logo { position: absolute; left: -150px; top: 50%; width: 820px; height: 820px; transform: translateY(-50%); object-fit: contain; opacity: .1; }
+    .text { position: absolute; left: 300px; width: 600px; top: 40px; height: 440px; display: flex; flex-direction: column; justify-content: center; gap: 20px; }
+    .eyebrow { font-size: 22px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; opacity: .78; }
+    h1 { margin: 0; font-size: 74px; line-height: 1.04; font-weight: 800; letter-spacing: -.01em; overflow-wrap: anywhere; }
+    .tagline { font-size: 30px; line-height: 1.25; color: var(--accent); }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <img class="logo" alt="" hidden>
+  <div class="text">
+    <div class="eyebrow" data-share-text hidden></div>
+    <h1 data-share-text></h1>
+    <div class="tagline" data-share-text hidden></div>
+  </div>
+  <script>
+    'use strict';
+    const params = new URLSearchParams(location.search);
+    const set = (selector, value) => {
+      const element = document.querySelector(selector);
+      if (!value) { element.remove(); return; }
+      element.hidden = false;
+      element.textContent = value;
+    };
+    set('.eyebrow', params.get('eyebrow'));
+    set('.tagline', params.get('tagline'));
+    const title = document.querySelector('h1');
+    (params.get('title') || 'Title').split('|').forEach((line, index) => {
+      if (index) title.append(document.createElement('br'));
+      title.append(line.trim());
+    });
+    const logo = document.querySelector('.logo');
+    if (params.get('logo')) { logo.src = params.get('logo'); logo.hidden = false; } else logo.remove();
+    for (const name of ['bg', 'bg2', 'fg', 'accent', 'font']) {
+      if (params.get(name)) document.documentElement.style.setProperty(`--${name}`, params.get(name));
+    }
+    document.documentElement.lang = params.get('lang') || 'en';
+  </script>
+</body>
+</html>

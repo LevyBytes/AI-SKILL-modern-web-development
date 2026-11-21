@@ -6,7 +6,7 @@ export function retrieve(pages: Page[], selector: string) {
   if (specific) return readPage(specific);
   let found = pages.filter((p) => p.id === topicId(selector) || p.entry === selector);
   if (!found.length) throw Error('Unknown topic or page: ' + selector + '. Use list or search.');
-  const edition = ['authored', 'source', 'published', 'expectations'].find((ed) =>
+  const edition = ['authored', 'source', 'skill', 'published', 'expectations'].find((ed) =>
     found.some((p) => p.edition === ed),
   );
   found = found.filter((p) => p.edition === edition);

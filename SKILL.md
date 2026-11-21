@@ -1,9 +1,9 @@
 ---
 name: modern-web-development
-description: "Use when consulting modern web platform guidance for HTML, CSS, JavaScript, accessibility, forms, browser APIs, performance, security, PWA installation, Chrome extensions or browser compatibility, including authored guidance, published editions and behavior expectations."
+description: "Use when consulting modern web platform guidance for HTML, CSS, JavaScript, accessibility, forms, browser APIs, performance, security, PWA installation, Chrome extensions or browser compatibility, including authored guidance, published editions and behavior expectations; or when writing site metadata (head tags, Open Graph, X cards, Apple link previews, JSON-LD rich results, hreflang, robots rules, AI crawlers and usage preferences, sitemaps, IndexNow, feeds, icons, image rights and C2PA, app links, llms.txt, ads.txt, security.txt and well-known files), titles, descriptions and share images, or previewing and auditing link cards and metadata before deployment."
 license: Apache-2.0
 metadata:
-  last-updated: "2026-11-18"
+  last-updated: "2026-11-21"
 ---
 
 # Context Router
@@ -22,6 +22,7 @@ metadata:
 - Open when handling web identity, embedded state and privacy boundaries. [Browser privacy](references/privacy-controls/index.md).
 - Open when implementing origin checks, content safety, cryptography or passkeys. [Browser security and identity](references/browser-security/index.md).
 - Open when building offline behavior, installation, updates or OS integration. [Installed web applications](references/installed-web-apps/index.md).
+- Open when writing a site's head tags, titles and descriptions, share images, icons, structured data, crawl, feed, app link and well-known files, AI usage preferences or ownership verification, or previewing and auditing metadata before deployment. [Site metadata](references/site-metadata/index.md).
 - Open when checking device support for prompting, translation, detection or summarization. [Built-in model APIs](references/browser-models/index.md).
 - Open when compiling C or C++ for a browser runtime. [WebAssembly builds](references/webassembly-builds/index.md).
 - Open when exposing a form or registering an authorized tool from a web document. [WebMCP tools](references/web-tools/index.md).

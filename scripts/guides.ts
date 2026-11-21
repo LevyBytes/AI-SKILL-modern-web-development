@@ -20,7 +20,7 @@ const namespace: Record<string, string> = {
   'feature-support': 'feature',
   'upstream-operations': 'upstream',
 };
-export type Edition = 'authored' | 'published' | 'expectations' | 'source';
+export type Edition = 'authored' | 'published' | 'expectations' | 'source' | 'skill';
 export interface Page {
   id: string;
   area: string;
@@ -66,7 +66,7 @@ export function buildIndex(): Index {
   for (const area of fs.readdirSync(refRoot).sort()) {
     const dir = path.join(refRoot, area);
     if (!fs.lstatSync(dir).isDirectory()) continue;
-    for (const edition of ['authored', 'published', 'expectations', 'source'] as const) {
+    for (const edition of ['authored', 'published', 'expectations', 'source', 'skill'] as const) {
       const catalog = path.join(dir, edition + '-topics.json');
       if (!fs.existsSync(catalog)) continue;
       const { topics } = JSON.parse(fs.readFileSync(catalog, 'utf8')) as { topics: Topic[] };

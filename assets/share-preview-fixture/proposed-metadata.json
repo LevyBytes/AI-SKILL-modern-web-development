@@ -1,0 +1,89 @@
+{
+  "imageUrl": "https://tides.example/media/tide-tables-share.jpg",
+  "website": { "name": "Example Tide Tables", "alternateName": ["Tide Tables", "tides.example"] },
+  "pages": {
+    "home": {
+      "title": "Example Tide Tables",
+      "description": "Print tide tables for any harbour: high and low water, heights and moon phases for a month on one page. Free, no sign-up, no tracking.",
+      "robots": "index, follow, max-image-preview:large",
+      "themeColor": [{ "color": "#133744", "media": "(prefers-color-scheme: light)" }, { "color": "#0b1f27", "media": "(prefers-color-scheme: dark)" }],
+      "applicationName": "Example Tide Tables",
+      "appleTitle": "Tide Tables",
+      "siteName": "Tide Tables",
+      "locale": "en_GB",
+      "ogTitle": "Example Tide Tables",
+      "ogDescription": "Print tide tables for any harbour: high and low water, heights and moon phases for a month on one page. Free, no sign-up, no tracking.",
+      "twitterCard": "summary_large_image",
+      "twitterTitle": "Example Tide Tables",
+      "twitterDescription": "Print tide tables for any harbour: high and low water, heights and moon phases for a month on one page. Free, no sign-up, no tracking.",
+      "twitterLabels": [["Price", "Free"]],
+      "extraTags": [
+        { "tag": "link", "rel": "icon", "href": "favicon.ico", "sizes": "16x16 32x32 48x48" },
+        { "tag": "link", "rel": "icon", "type": "image/svg+xml", "href": "favicon.svg" },
+        { "tag": "link", "rel": "apple-touch-icon", "href": "apple-touch-icon.png" },
+        { "tag": "link", "rel": "manifest", "href": "manifest.webmanifest" },
+        { "tag": "link", "rel": "alternate", "type": "application/atom+xml", "title": "Example Tide Tables updates", "href": "https://tides.example/feed.xml" }
+      ],
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@graph": [
+          { "@type": "WebSite", "@id": "https://tides.example/#website", "url": "https://tides.example/", "name": "Example Tide Tables",
+            "alternateName": ["Tide Tables", "tides.example"], "inLanguage": "en", "publisher": { "@id": "https://tides.example/#publisher" } },
+          { "@type": "WebApplication", "@id": "https://tides.example/#application", "url": "https://tides.example/", "name": "Example Tide Tables",
+            "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript.",
+            "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "image": "https://tides.example/media/tide-tables-share.jpg", "isPartOf": { "@id": "https://tides.example/#website" },
+            "author": { "@id": "https://tides.example/#publisher" }, "publisher": { "@id": "https://tides.example/#publisher" } },
+          { "@type": "Person", "@id": "https://tides.example/#publisher", "name": "Example Publisher", "url": "https://tides.example/about.html" }
+        ]
+      },
+      "status": {
+        "title": "fix", "description": "fix", "robots": "fix", "theme-color": "fix", "application-name": "fix", "apple-mobile-web-app-title": "fix",
+        "canonical": "same", "og:type": "same", "og:url": "same", "og:site_name": "fix", "og:locale": "fix", "og:title": "fix", "og:description": "fix",
+        "og:image": "fix", "og:image:alt": "fix", "twitter:card": "fix", "twitter:title": "fix", "twitter:description": "fix", "twitter:image": "fix",
+        "twitter:image:alt": "fix", "twitter:label1": "fix", "twitter:data1": "fix", "JSON-LD WebSite name": "fix", "JSON-LD": "fix",
+        "icon": "fix", "apple-touch-icon": "fix", "manifest": "fix", "alternate application/atom+xml": "fix"
+      }
+    },
+    "about": {
+      "title": "About Example Tide Tables",
+      "description": "Where the tide tables come from, how they are calculated in your browser, and why nothing you enter leaves your device.",
+      "robots": "index, follow",
+      "themeColor": "#133744",
+      "applicationName": "Example Tide Tables",
+      "appleTitle": "Tide Tables",
+      "siteName": "Tide Tables",
+      "locale": "en_GB",
+      "ogTitle": "About Example Tide Tables",
+      "ogDescription": "Where the tide tables come from, how they are calculated in your browser, and why nothing you enter leaves your device.",
+      "twitterCard": "summary_large_image",
+      "twitterTitle": "About Example Tide Tables",
+      "twitterDescription": "Where the tide tables come from, how they are calculated in your browser, and why nothing you enter leaves your device.",
+      "extraTags": [
+        { "tag": "meta", "name": "twitter:site", "content": "@tidesexample" },
+        { "tag": "link", "rel": "icon", "href": "favicon.ico", "sizes": "16x16 32x32 48x48" },
+        { "tag": "link", "rel": "icon", "type": "image/svg+xml", "href": "favicon.svg" },
+        { "tag": "link", "rel": "apple-touch-icon", "href": "apple-touch-icon.png" },
+        { "tag": "link", "rel": "manifest", "href": "manifest.webmanifest" },
+        { "tag": "link", "rel": "alternate", "type": "application/atom+xml", "title": "Example Tide Tables updates", "href": "https://tides.example/feed.xml" }
+      ],
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@graph": [
+          { "@type": "WebPage", "@id": "https://tides.example/about.html#webpage", "url": "https://tides.example/about.html", "name": "About Example Tide Tables",
+            "inLanguage": "en", "dateModified": "2026-11-17", "isPartOf": { "@id": "https://tides.example/#website" },
+            "breadcrumb": { "@id": "https://tides.example/about.html#breadcrumb" } },
+          { "@type": "BreadcrumbList", "@id": "https://tides.example/about.html#breadcrumb", "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Example Tide Tables", "item": "https://tides.example/" },
+            { "@type": "ListItem", "position": 2, "name": "About" } ] }
+        ]
+      },
+      "status": {
+        "title": "fix", "description": "fix", "robots": "fix", "og:type": "fix", "og:url": "fix", "og:site_name": "fix", "og:locale": "fix",
+        "og:title": "fix", "og:description": "fix", "og:image": "fix", "og:image:alt": "fix", "twitter:card": "fix", "twitter:title": "fix",
+        "twitter:description": "fix", "twitter:image": "fix", "twitter:image:alt": "fix", "JSON-LD": "fix",
+        "twitter:site": "fix", "icon": "fix", "apple-touch-icon": "fix", "manifest": "fix", "alternate application/atom+xml": "fix"
+      }
+    }
+  }
+}

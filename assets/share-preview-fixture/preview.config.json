@@ -1,0 +1,75 @@
+{
+  "site": { "root": "site", "url": "https://tides.example/", "base": "docs/" },
+  "pages": [
+    { "key": "home", "label": "Home", "file": "index.html" },
+    { "key": "about", "label": "About", "file": "about.html" }
+  ],
+  "gallery": {
+    "title": "Example Tide Tables share and search previews",
+    "iconBackground": "#133744",
+    "homeKey": "home",
+    "searchQuery": { "home": "printable tide tables" },
+    "redditCommunity": "r/sailing",
+    "platformNotes": { "discord": ["Fixture note: added by the configuration's platformNotes."] },
+    "textChecks": [
+      { "pattern": "^Backup\\b", "fields": ["description", "shareDescription"], "warn": true,
+        "html": "<b>“Backup” used as a verb.</b> “Backup” is the noun; the verb is “back up”." }
+    ],
+    "findings": [
+      { "html": "<b>Fixture finding.</b> Added to every page's overview by the configuration's findings." }
+    ],
+    "headKeeps": "charset, viewport, referrer, twitter:site, the icon and the stylesheet",
+    "notMocked": ["A harbour forum. Post the link in a private thread to see its card."]
+  },
+  "proposed": "proposed-metadata.json",
+  "shareCards": [
+    {
+      "id": "main",
+      "label": "Main card",
+      "file": "tide-tables-share",
+      "publishAs": "media/tide-tables-share.jpg",
+      "query": {
+        "eyebrow": "tides.example",
+        "title": "Example|Tide Tables",
+        "tagline": "Printable tide tables for any harbour",
+        "logo": "./site/favicon.svg"
+      },
+      "alt": "Example Tide Tables: printable tide tables for any harbour.",
+      "checks": { "maxTextShare": 20 },
+      "imageMetadata": {
+        "creator": "Example Publisher",
+        "creditText": "Example Tide Tables",
+        "copyrightNotice": "Copyright 2026 Example Publisher",
+        "webStatement": "https://tides.example/about.html"
+      }
+    }
+  ],
+  "icons": {
+    "source": "./site/favicon.svg",
+    "files": [
+      { "publishAs": "favicon.ico", "sizes": [16, 32, 48] },
+      { "publishAs": "icon-192.png", "size": 192 },
+      { "publishAs": "icon-512.png", "size": 512 },
+      { "publishAs": "icon-maskable-512.png", "size": 512, "purpose": "maskable", "background": "#133744" },
+      { "publishAs": "apple-touch-icon.png", "size": 180, "background": "#133744" }
+    ]
+  },
+  "siteFiles": {
+    "robots": { "contentSignal": "search=yes, ai-input=yes, ai-train=yes", "contentUsage": "train-ai=y", "aiTraining": "allow", "crawlers": { "GPTBot": "allow" } },
+    "sitemap": { "lastmod": { "home": "2026-11-19", "about": "2026-11-17" }, "images": true },
+    "securityTxt": {
+      "comment": ["Security contact for tides.example (RFC 9116).", "Report a vulnerability privately through the repository's form."],
+      "contact": ["https://git.example/tides/security/advisories/new"],
+      "policy": "https://git.example/tides/security/policy",
+      "preferredLanguages": "en",
+      "expiresInDays": 330
+    },
+    "indexNow": { "keyFile": "indexnow.txt", "workflow": { "branch": "main", "waitSeconds": 120 } },
+    "tdmRep": { "reservation": 0 },
+    "gpc": { "gpc": true, "lastUpdate": "2026-11-21" },
+    "llmsTxt": true,
+    "adsTxt": { "noSellers": true, "comment": ["This site sells no advertising."] },
+    "manifest": { "name": "Example Tide Tables", "short_name": "Tide Tables", "id": "/", "start_url": "/", "display": "standalone",
+      "theme_color": "#133744", "background_color": "#ffffff" }
+  }
+}

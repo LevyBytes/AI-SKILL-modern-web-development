@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "owner": ".",
+  "topics": [
+    {"topic": "Skill topics", "file": "references/site-metadata/skill-topics.json", "summary": "Open when searching the skill topics for Site metadata.", "keywords": ["skill", "Site metadata"]},
+    {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translated references"]}
+  ]
+}

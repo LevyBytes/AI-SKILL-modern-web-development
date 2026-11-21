@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://tides.example/</id>
+  <title>Example Tide Tables updates</title>
+  <updated>2026-11-19T09:00:00Z</updated>
+  <author><name>Example Publisher</name></author>
+  <link rel="self" href="https://tides.example/feed.xml"/>
+  <link rel="alternate" href="https://tides.example/"/>
+  <entry>
+    <id>https://tides.example/#2026-11-19</id>
+    <title>Moon phases on every table</title>
+    <updated>2026-11-19T09:00:00Z</updated>
+    <link rel="alternate" href="https://tides.example/"/>
+    <summary>Each printed month now shows the moon phases beside the tides.</summary>
+  </entry>
+  <entry>
+    <id>https://tides.example/about.html#2026-11-17</id>
+    <title>About page rewritten</title>
+    <updated>2026-11-17T09:00:00Z</updated>
+    <link rel="alternate" href="https://tides.example/about.html"/>
+    <summary>Where the tables come from and why nothing you enter leaves your device.</summary>
+  </entry>
+</feed>

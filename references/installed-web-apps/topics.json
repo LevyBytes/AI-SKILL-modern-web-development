@@ -5,6 +5,7 @@
     {"topic": "Authored topics", "file": "references/installed-web-apps/authored-topics.json", "summary": "Open when searching the authored topics for Installed web applications.", "keywords": ["authored", "Installed web applications"]},
     {"topic": "Published topics", "file": "references/installed-web-apps/published-topics.json", "summary": "Open when searching the published topics for Installed web applications.", "keywords": ["published", "Installed web applications"]},
     {"topic": "Expectations topics", "file": "references/installed-web-apps/expectations-topics.json", "summary": "Open when searching the expectations topics for Installed web applications.", "keywords": ["expectations", "Installed web applications"]},
+    {"topic": "Skill topics", "file": "references/installed-web-apps/skill-topics.json", "summary": "Open when searching the skill topics for Installed web applications.", "keywords": ["skill", "Installed web applications"]},
     {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translated references"]}
   ]
 }

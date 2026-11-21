@@ -1,6 +1,6 @@
 # Local lookup and grading
 
-Run these commands from the skill directory using Node.js 22.18 or later. Lookup uses Node built-ins. Each search result contains a topic ID, edition and local page path. Use the page path to read a specific section or the topic ID to read the complete guide in its preferred edition. Source footers remain in the retrieved text.
+Run these commands from the skill directory using Node.js 22.18 or later. Lookup uses Node built-ins. Each search result contains a topic ID, edition and local page path. Editions are `authored` and `published` for upstream guides, `expectations` for behavior criteria, `source` for other upstream repository documents and `skill` for guides written for this skill. Use the page path to read a specific section or the topic ID to read the complete guide in its preferred edition. Source footers remain in the retrieved text.
 
 ```powershell
 node scripts/lookup.ts search "IME composing text" --limit 5

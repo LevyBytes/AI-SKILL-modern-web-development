@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "owner": ".",
+  "topics": [
+    {"topic": "Installable web app metadata", "file": "references/installed-web-apps/web-app-manifest.md", "summary": "Open when writing a web app manifest's name, identity, start page, scope, display mode, colors, icons and shortcuts, or checking installability.", "keywords": ["web-app-manifest", "Skill guide", "manifest", "installability", "color-scheme-dark"]},
+    {"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translated references"]}
+  ]
+}

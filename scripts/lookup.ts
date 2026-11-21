@@ -11,7 +11,8 @@ const help = `Local Modern Web Development lookup (Node 22.18+)
   node scripts/lookup.ts verify
 
 Search and list write JSON; retrieve writes the original Markdown with attribution.
-Search results are suggestions. Filter search, list or retrieval by area and edition.
+Search results are suggestions. Filter search, list or retrieval by area and edition
+(authored, published, expectations, source or skill).
 Rebuild creates the lexical index from the local reference tree. Verify checks freshness.`;
 
 function run() {
@@ -55,7 +56,7 @@ function run() {
   }
   if (
     values.edition &&
-    !['authored', 'published', 'source', 'expectations'].includes(values.edition)
+    !['authored', 'published', 'source', 'skill', 'expectations'].includes(values.edition)
   )
     throw Error('Unknown edition: ' + values.edition);
   if (values.area && !index.pages.some((p) => p.area === values.area))
