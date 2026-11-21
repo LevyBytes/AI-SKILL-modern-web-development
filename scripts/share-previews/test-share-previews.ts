@@ -83,6 +83,27 @@ async function galleryInteractions(out: string, config: any, channel?: string) {
       const built = proposedMarkup(data.pages.find((p: any) => p.key === key), home, config.proposed, cards);
       check(`audit: the head it audits for ${key} is the head the gallery writes`, shown === built, `${shown}\n---\n${built}`);
     }
+    // Discord trims titles at 70 bytes and descriptions at 350. The title's É fills bytes 70 and 71, and both texts
+    // have more bytes than characters, so counting characters or keeping a character that crosses the limit fails.
+    const longTitle = 'Tide tables for every harbour on the Channel coast, from Boulogne to Étretat and Le Havre, with heights and moon phases';
+    const longDescription = 'Tables des marées imprimables pour chaque port, avec hauteurs et phases de la lune. '.repeat(6);
+    const long = await (await browser.newContext({ viewport: { width: 1480, height: 900 } })).newPage();
+    long.on('pageerror', (error: unknown) => errors.push(String(error)));
+    await long.addInitScript(([title, description]: string[]) => {
+      let stored: any;
+      Object.defineProperty(window, 'PROPOSED_METADATA', { configurable: true, get: () => stored,
+        set: (value: any) => { value.pages.home.ogTitle = title; value.pages.home.ogDescription = description; stored = value; } });
+    }, [longTitle, longDescription]);
+    await long.goto(`${gallery}?page=home&meta=proposed&theme=light&open=all`);
+    await long.waitForSelector('body[data-ready="true"]');
+    const dc = await long.evaluate(() => {
+      const text = (name: string) => document.querySelector(`#mock-discord [data-field="${name}"]`)?.textContent ?? '';
+      return { title: text('title'), description: text('description'), chips: [...document.querySelectorAll('#mock-discord .chip')].map(el => el.textContent).join(' | ') };
+    });
+    const fitsBytes = (shown: string, full: string, max: number) => shown.endsWith('…') && Buffer.byteLength(shown.slice(0, -1), 'utf8') <= max && full.startsWith(shown.slice(0, -1));
+    check('gallery: the Discord mockup trims the title to 70 bytes and the description to 350, and marks both cut short',
+      fitsBytes(dc.title, longTitle, 70) && dc.title === 'Tide tables for every harbour on the Channel coast, from Boulogne to…' && fitsBytes(dc.description, longDescription, 350)
+        && /Cut short: title, description/.test(dc.chips), JSON.stringify(dc));
     check('gallery: no page errors', errors.length === 0, errors.join(' | '));
   } finally {
     await browser.close();

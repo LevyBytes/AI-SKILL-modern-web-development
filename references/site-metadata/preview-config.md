@@ -44,6 +44,7 @@ Paths in the configuration are relative to its own file. Keep the configuration,
 ```
 
 - **`imageUrl`:** where the chosen share card will be published. It must match a card's `publishAs`.
+- **`website`:** required in every proposal. `name`, and optionally `alternateName`, is the site name the proposed search mockups show, as Google reads it from WebSite JSON-LD; llms.txt also uses `name` as its title unless `siteFiles.llmsTxt.title` sets one.
 - **`status`:** marks each tag in the metadata table: `owner` (the owner's decision), `fix` (a proposed fix) or `same` (unchanged). Tags not listed show as unchanged.
 - **Empty values:** a value left empty is not written. The tag it would replace stays as the page has it.
 - **`jsonLd`:** replaces every JSON-LD block in the page's head; a block in the body stays (see [Limits](preview-gallery.md#limits)). See [Structured data](structured-data.md).

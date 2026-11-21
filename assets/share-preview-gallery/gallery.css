@@ -379,7 +379,7 @@ main { display: grid; gap: 12px; min-width: 0; }
 .dc-embed { margin-top: 2px; max-width: 432px; background: var(--embed); border-left: 4px solid var(--stripe, var(--stripe-default)); border-radius: 4px; padding: 8px 16px 16px 12px; display: grid; }
 .dc-prov { font-size: 12px; line-height: 16px; color: var(--text); margin-top: 8px; }
 .dc-title { font-size: 16px; line-height: 22px; font-weight: 600; color: var(--link); margin-top: 8px; }
-.dc-desc { font-size: 14px; line-height: 18px; color: var(--text); margin-top: 8px; }
+.dc-desc { font-size: 14px; line-height: 18px; color: var(--text); margin-top: 8px; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 20; overflow: hidden; }
 .dc-img { margin-top: 16px; width: 100%; max-width: 400px; border-radius: 4px; display: block; }
 
 /* Slack */

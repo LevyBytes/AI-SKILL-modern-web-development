@@ -25,7 +25,22 @@
   const ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ESC[c]);
   const len = text => [...String(text ?? '')].length;
+  const utf8 = text => new TextEncoder().encode(String(text ?? '')).length;
+  // The longest start of text that fits in max UTF-8 bytes, cut between code points.
+  const fitBytes = (text, max) => {
+    let out = '';
+    let used = 0;
+    for (const ch of String(text ?? '')) {
+      used += utf8(ch);
+      if (used > max) break;
+      out += ch;
+    }
+    return out;
+  };
   const kb = bytes => `${Math.round(bytes / 1024)} KB`;
+  // Discord's link preview limits: titles are trimmed at 70 bytes and 3 lines, descriptions at 350 bytes and 20 lines.
+  const DISCORD_TITLE_BYTES = 70;
+  const DISCORD_DESCRIPTION_BYTES = 350;
   const home = D.pages.find(p => p.key === (CONFIG.homeKey ?? 'home')) ?? D.pages[0];
 
   const params = new URLSearchParams(location.search);
@@ -171,6 +186,13 @@
   }
 
   const field = (tag, cls, name, text) => `<${tag} class="${cls}" data-field="${name}">${esc(text)}</${tag}>`;
+  // A field the platform trims to max UTF-8 bytes before layout. An ellipsis marks the cut, and data-trimmed makes
+  // settle() list the field as cut short, like one the layout clips.
+  const fieldBytes = (tag, cls, name, text, max) => {
+    const value = String(text ?? '');
+    if (utf8(value) <= max) return field(tag, cls, name, value);
+    return `<${tag} class="${cls}" data-field="${name}" data-trimmed="${max}">${esc(fitBytes(value, max).trimEnd())}…</${tag}>`;
+  };
   const img = (src, cls, alt = '') => `<img class="${cls}" src="${esc(src)}" alt="${esc(alt)}">`;
   const avatar = () => '<span class="av" aria-hidden="true">EU</span>';
   const skeleton = () => '<div class="sk" aria-hidden="true"><i></i><i></i><i></i><i></i></div>';
@@ -357,8 +379,8 @@
         <div class="dc-text"><a>${esc(f.url)}</a></div>
         <div class="dc-embed"${stripe}>
           ${f.siteName ? field('div', 'dc-prov', 'site name', f.siteName) : ''}
-          ${field('div', 'dc-title', 'title', f.shareTitle)}
-          ${f.shareDescription ? field('div', 'dc-desc', 'description', f.shareDescription) : ''}
+          ${fieldBytes('div', 'dc-title clamp3', 'title', f.shareTitle, DISCORD_TITLE_BYTES)}
+          ${f.shareDescription ? fieldBytes('div', 'dc-desc', 'description', f.shareDescription, DISCORD_DESCRIPTION_BYTES) : ''}
           ${large ? img(f.image.local, 'dc-img', f.imageAlt) : ''}
         </div>
       </div></div>`;
@@ -509,6 +531,8 @@
           const bg = state.theme === 'dark' ? '#2b2d31' : '#f2f3f5';
           out.push(`Stripe ${esc(f.themeColor)} against this theme’s embed background: ${contrast(f.themeColor, bg).toFixed(2)}:1.`);
         }
+        const over = [['title', f.shareTitle, DISCORD_TITLE_BYTES], ['description', f.shareDescription, DISCORD_DESCRIPTION_BYTES]].filter(([, text, max]) => utf8(text) > max);
+        if (over.length) out.push(`Discord trims ${over.map(([name, text, max]) => `the ${name} (${utf8(text)} bytes) to ${max} bytes`).join(' and ')}; the mockup shows what is left.`);
         return out;
       } },
     { id: 'slack', group: 'chat', name: 'Slack', variant: 'chat', w: 600, conf: 'high', frame: 'p-sl', render: R.slack,
@@ -910,7 +934,7 @@
     for (const el of closed) el.open = true;
     const cuts = {};
     for (const mock of document.querySelectorAll('.mock')) {
-      const cut = [...mock.querySelectorAll('[data-field]')].filter(el => el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1);
+      const cut = [...mock.querySelectorAll('[data-field]')].filter(el => el.dataset.trimmed || el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1);
       cuts[mock.dataset.id] = [...new Set(cut.map(el => el.dataset.field))];
     }
     for (const el of closed) el.open = false;
